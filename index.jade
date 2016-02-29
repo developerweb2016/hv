@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+    head
+        title Hv - Materialize
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='description', content='description')
+        meta(name='keywords', content='keywords')
+        meta(name='author', content='author')
+        meta(name="robots", content="index, follow")
+
+        //- ----- link website ----- //
+        link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
+
+        //- ----- CSS Files ----- //
+        link(href="css/icon.css", rel="stylesheet")
+        link(href="css/materialize.css", type="text/css", rel="stylesheet", media="screen,projection")
+        link(href="css/style.css", type="text/css", rel="stylesheet", media="screen,projection")
+        
+        
+    body
+      nav.light-blue.lighten-1(role="navigation")
+        .nav-wrapper.container
+          a.brand-logo(href='#', id="logo-container") logo
+          ul.right.hide-on-med-and-down
+              li 
+                a.class(href='#', title="title", attr) Navbar link
+          ul.side-nav#nav-mobile    
+              li 
+                a.class(href='#', title="title", attr) Navbar link
+          a.button-collapse(href='#', data-activates="nav-mobile")
+              i.material-icons menu 
+      .section.no-pad-bot#index-banner
+          .container
+              br
+              br
+              h1.header.center.orange-text Starter Template
+              .row.center
+                h5.header.col.s12.light   A modern responsive front-end framework based on Material Design
+              .row.center
+                  a.btn-large.waves-effect.waves-light.orange#download-button(href='http://materializecss.com/getting-started.html', title="title", attr) Get Started
+      .container
+          .section
+              .row
+                .col.s12.m4
+                  .icon-block
+                    h2.center.light-blue-text
+                      i.material-icons flash_on
+                    h5.center Speeds up development
+                    p.light   We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+                .col.s12.m4
+                  .icon-block
+                    h2.center.light-blue-text
+                      i.material-icons group
+                    h5.center   User Experience Focused
+                    p.light By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience
+                .col.s12.m4
+                      .icon-block
+                        h2.center.light-blue-text
+                          i.material-icons settings
+                        h5.center   Easy to work with
+                        p.light   We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+                br              
+                br
+                .section  
+      footer.page-footer.orange
+        .container
+          .row
+            .col.l6.s12
+              h5.white-text Company Bio
+              p.grey-text.text-lighten-4  
+                | We are a team of college students working on this project like it's our full time job.
+                | Any amount would help support and continue development on this project and is greatly appreciated.
+            .col.13.s12
+                h5.white-text  Settings
+                ul
+                  - each item in [ 'link 1', 'link 2', 'link 3','link 4' ]
+                      li: a.white-text(href="#")= item
+            .col.13.s12
+                h5.white-text  Connect
+                ul
+                  - each item2 in [ 'link 1', 'link 2', 'link 3','link 4' ]
+                        li: a.white-text(href="#")= item2
+        .footer-copyright
+            .container  made by
+                        a.orange-text.text-lighten-3(href='http://materializecss.com') Materialize
+      script(type='text/javascript', src='js/jquery-2.1.1.min.js')
+      script(type='text/javascript', src='js/materialize.js')
+      script(type='text/javascript', src='js/init.js')
+                        
+                  
