@@ -10,7 +10,7 @@ html(lang='en')
         meta(name="robots", content="index, follow")
 
         //- ----- link website ----- //
-        link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
+        link(rel='icon' href='img/favicon.png' type='image/x-icon')
 
         //- ----- CSS Files ----- //
         link(href="css/icon.css", rel="stylesheet")
@@ -21,69 +21,161 @@ html(lang='en')
     body
       nav.light-blue.lighten-1(role="navigation")
         .nav-wrapper.container
-          a.brand-logo(href='#', id="logo-container") logo
+          a.brand-logo(href='#', id="logo-container") 
+            img.img-65(src="img/logo-edeveloper.png", alt="edeveloper")
           ul.right.hide-on-med-and-down
               li 
-                a.class(href='#', title="title", attr) Navbar link
+                a.class(href='#acerca', title="title", attr) Acerca
+              li 
+                a.class(href='#portafolio', title="title", attr) Portafolio
+              li 
+                a.class(href='#certificacion', title="title", attr) Certificación  
+                
+                
           ul.side-nav#nav-mobile    
               li 
-                a.class(href='#', title="title", attr) Navbar link
+                a(href='#') Navbar link
           a.button-collapse(href='#', data-activates="nav-mobile")
               i.material-icons menu 
       .section.no-pad-bot#index-banner
           .container
               br
               br
-              h1.header.center.orange-text Starter Template
+              p#acerca  
+              h1.header.center.orange-text Edgar Humberto Piñeros Duarte
               .row.center
-                h5.header.col.s12.light   A modern responsive front-end framework based on Material Design
+                h3.header.col.s12.light.orange-text  Perfil Profesional 
               .row.center
-                  a.btn-large.waves-effect.waves-light.orange#download-button(href='http://materializecss.com/getting-started.html', title="title", attr) Get Started
+                  p.waves-effect
+                      | Programador web con un año de experiencia laboral  desarrollando páginas web con HTML4 y 5, JQUERY, PHP
+                      | Conocimientos en HTML versión 4 y 5 , CSS , JAVASCRIPT , JQUERY , JAVA , JSP , 
+                      | en motores de base de datos como MYSQL , SQLSERVER  y en RESPONSIVE WEB DESIGN para adaptar una pagina web a móviles y pc´s.
+                      | Interes en aprender nuevas tecnologías de desarrollo
+
+
+
       .container
           .section
+              h3.center.orange-text Datos Basicos
               .row
                 .col.s12.m4
+                  
                   .icon-block
                     h2.center.light-blue-text
-                      i.material-icons flash_on
-                    h5.center Speeds up development
-                    p.light   We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+                      i.material-icons email
+                    h5.center Email
+                    p.light.new.badge  hv.edgarduarte@gmail.com
                 .col.s12.m4
                   .icon-block
                     h2.center.light-blue-text
-                      i.material-icons group
-                    h5.center   User Experience Focused
-                    p.light By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience
+                      i.material-icons perm_identity
+                    h5.center   Edad
+                    p.light.new.badge 31 años
                 .col.s12.m4
                       .icon-block
                         h2.center.light-blue-text
-                          i.material-icons settings
-                        h5.center   Easy to work with
-                        p.light   We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+                          i.material-icons store
+                        h5.center   Dirección
+                        p.light   Dg 16b 104-17, Bogotá, Cundinamarca
+                .col.s12.m4
+                      .icon-block
+                        h2.center.light-blue-text
+                          i.material-icons today
+                        h5.center   Fecha de nacimiento
+                        p.light.new.badge   18 de diciembre 1984
+                .col.s12.m4
+                      .icon-block
+                        h2.center.light-blue-text
+                          i.material-icons stay_primary_portrait
+                        h5.center   Celular
+                        p.light.new.badge   3115364696 
+                .col.s12.m4
+                      .icon-block
+                        h2.center.light-blue-text
+                          i.material-icons contact_phone
+                        h5.center   Telefono
+                        p.light.new.badge   4703770               
                 br              
                 br
-                .section  
-      footer.page-footer.orange
+      
+          .section
+              h3.center.orange-text Estudios
+              table.bordered.centered.highlight
+                thead
+                  tr
+                    - each encabezado in [ 'titulo','fecha','institución','dirección','lugar de estudio' ]
+                        th= encabezado
+                tbody
+                  tr
+                    - each datoTecnologo in [ 'Tecnólogo en análisis y desarrollo de sistemas de información','2010 hasta 2011','Sena Centro de gestión de mercados, logística y tecnologías de la información','calle 52 13-65','Bogotá' ]
+                        td= datoTecnologo
+                  tr      
+                    - each datoTecnico in [ 'Tecnico en procesamiento de frutas y hortalizas','2008 hasta 2009','Sena centro nacional de hoteleria,  turismo y alimentos','Calle 15 31-42','Bogotá' ]
+                        td= datoTecnico
+                  tr
+                    - each datoBachiller in ['Bachiller Academico','1997 hasta 2003','Pablo Neruda','Calle 16f bis 102-70','Bogotá'  ]
+                        td= datoBachiller       
+                  tr      
+                    - each datosPrimaria in [ 'primaria','1994 hasta 1997','Republica de finlandia','Carrera 72b 44-19sur','Bogotá' ]
+                        td= datosPrimaria      
+          .section
+                  .row
+                     .col.s12.m7
+                          .card
+                              .card-image
+                                img.img-300(src="img/certificacion/desarrollo-web-activate.png", alt="")
+                              .card-content
+                                            p Formacion virtual activate Universidad de alicante
+                              .card-action
+                                            p España,Noviembre 2015 
+                     .col.s12.m7
+                          .card
+                              .card-image
+                                img.img-300(src="img/certificacion/php.jpg", alt="")
+                              .card-content
+                                 p Curso Corto Sena Fontibon
+                              .card-action
+                                 p Colombia,Septiembre 2009                         
+          .section
+            h3.center.orange-text Experiencia Laboral
+            table.bordered.centered.highlight.responsive-table
+              thead
+                tr
+                  - each encabezado_empresa_dato in [ 'NOMBRE EMPRESA','CARGO','FUNCIONES','JEFE INMEDIATO','TELEFONO', 'TIEMPO LABORADO']
+                      th= encabezado_empresa_dato
+              tbody
+                tr
+                - each dato_empresa1 in [ 'ITO SOFTWARE SAS','Desarrollador Junior','desarrollo , modificación, soporte de aplicaciones web con el framework php Symphony2.4 ','Jhonattan Alférez','2872961','Octubre 6 de 2014 - marzo 23 de 2015'  ]
+                      td= dato_empresa1
+                tr      
+                - each dato_empresa2 in [ 'DSL DATA SOLUTIONS','Programador web','Desarrollo , modificación , soporte aplicaciones web realizadas por la empresa.','Genner Puello','6 78 85 21-317 430 4027','Julio 22 de 2013 - mayo 20 de 2014'  ]
+                      td= dato_empresa2
+                tr      
+                - each dato_empresa3 in [ 'AGRAF LTDA','Programador web','Pasar Interfaz gráfica a HTML, programación de páginas web el chingon.co y agrafltda.com, adaptar esas páginas a móviles usando la tecnología responsive web design, manejo ftp, manejo de hosting, manejo del programa de edición de imagenes Photoshop.','Alexander Garzón','6 95 59 45-317 440 7599','Febrero 26 de 2013 – junio 3 de 2013' ]
+                      td= dato_empresa3 
+                tr      
+                  - each dato_empresa4 in [ 'ETHOS SOLUCIONES DE SOFTWARE','Ingeniero Aprendiz ','realizar documentación y soporte de aplicaciones web  de la empresa, desarrollos nuevos, manejo de motor de base de datos Oracle, creación de webservices con java.','Alejandra Amaya','2 44 01 33','Abril 2012 – julio 2012' ]
+                      td= dato_empresa4                    
+                tr
+                  - each dato_empresa5 in [ 'ALIMENAT E.U','auxiliar de producción','Empaque, etiquetado , pesaje de productos lacteos ,carnicos,panaderos.','Jarol Moreno','2 16 99 01','Octubre 2008 - marzo de 2009' ]
+                      td= dato_empresa5
+      footer.page-footer.teal
         .container
           .row
-            .col.l6.s12
-              h5.white-text Company Bio
-              p.grey-text.text-lighten-4  
-                | We are a team of college students working on this project like it's our full time job.
-                | Any amount would help support and continue development on this project and is greatly appreciated.
             .col.13.s12
-                h5.white-text  Settings
+                h5.white-text     
                 ul
-                  - each item in [ 'link 1', 'link 2', 'link 3','link 4' ]
-                      li: a.white-text(href="#")= item
-            .col.13.s12
-                h5.white-text  Connect
-                ul
-                  - each item2 in [ 'link 1', 'link 2', 'link 3','link 4' ]
-                        li: a.white-text(href="#")= item2
+                  li: a(href='https://www.facebook.com/Programer-262606387264668/') 
+                          img(src="img/social/icon-facebook.png", alt="Facebook")
+                  li: a(href='https://twitter.com/edgar_developer')  
+                          img(src="img/social/icon-twitter.jpeg", alt="Twitter")
+                  li: a(href='https://co.linkedin.com/in/edgar-duarte-55b01636')  
+                          img(src="img/social/github-icon.png", alt="LinkedIn")
+                  li: a(href='https://www.youtube.com/')
+                          img(src="img/social/icon-youtube.png", alt="Youtube ")           
         .footer-copyright
             .container  made by
-                        a.orange-text.text-lighten-3(href='http://materializecss.com') Materialize
+                        a.orange-text.text-lighten-3(href='http://materializecss.com')  Materialize
       script(type='text/javascript', src='js/jquery-2.1.1.min.js')
       script(type='text/javascript', src='js/materialize.js')
       script(type='text/javascript', src='js/init.js')
