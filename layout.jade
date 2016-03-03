@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
     head
         block titulo
-             title Hv - Materialize
+             title Hv
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
         meta(name='description', content='description')
@@ -22,20 +22,24 @@ html(lang='en')
     body
       nav.light-blue.lighten-1(role="navigation")
         .nav-wrapper.container
-          a.brand-logo(href='#', id="logo-container") 
+          a.brand-logo(href='index.html', id="logo-container") 
             img.img-65(src="img/logo-edeveloper.png", alt="edeveloper")
           ul.right.hide-on-med-and-down
               li 
                 a.class(href='index.html') Acerca
               li 
-                a.class(href='#portafolio') Portafolio
+                a.class(href='portafolio.html') Portafolio
               li 
                 a.class(href='certificacion.html') Certificación  
                 
                 
           ul.side-nav#nav-mobile    
               li 
-                a(href='#') Navbar link
+                a.class(href='index.html') Acerca
+              li 
+                a.class(href='portafolio.html') Portafolio
+              li 
+                a.class(href='certificacion.html') Certificación
           a.button-collapse(href='#', data-activates="nav-mobile")
               i.material-icons menu
           
@@ -66,19 +70,22 @@ html(lang='en')
             .col.13.s12
                     
                 ul
-                  li: a(href='https://www.facebook.com/Programer-262606387264668/') 
+                  li: a(href='https://www.facebook.com/Programer-262606387264668/',target="_blank") 
                           img(src="img/social/icon-facebook.png", alt="Facebook")
-                  li: a(href='https://twitter.com/edgar_developer')  
+                  li: a(href='https://twitter.com/edgar_developer',target="_blank")  
                           img(src="img/social/icon-twitter.jpeg", alt="Twitter")
-                  li: a(href='https://co.linkedin.com/in/edgar-duarte-55b01636')  
+                  li: a(href='https://co.linkedin.com/in/edgar-duarte-55b01636',target="_blank")  
                           img(src="img/social/linkedin.png", alt="LinkedIn")
-                  li: a(href='https://www.youtube.com/')
+                  li: a(href='https://www.youtube.com/',target="_blank")
                           img(src="img/social/icon-youtube.png", alt="Youtube ")           
         .footer-copyright
-            .container  made by
-                        a.orange-text.text-lighten-3(href='http://materializecss.com')  Materialize
+            .container  realizado por  
+                        img(src="img/edeveloper.png", alt="edeveloper")
+                            
+                            
       script(type='text/javascript', src='js/jquery-2.1.1.min.js')
       script(type='text/javascript', src='js/materialize.js')
       script(type='text/javascript', src='js/init.js')
+      script(type='text/javascript', src='js/slider.js')
                         
                   
